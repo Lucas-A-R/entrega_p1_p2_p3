@@ -1,0 +1,9 @@
+INICIO:
+    LDA VALOR          ; Carrega o valor inicial no acumulador
+    ADD INCREMENTO     ; Soma o incremento ao valor inicial
+    STA RESULTADO      ; Armazena o resultado na memória
+    HLT                ; Finaliza o programa
+
+VALOR: 10              ; Valor inicial para o cálculo
+INCREMENTO: 5          ; Incremento a ser adicionado
+RESULTADO: 0           ; Local para armazenar o resultado
