@@ -1,0 +1,15 @@
+<Digito> ::= [0-9]
+<Numero> ::= <Digito> |  <Numero> <Digito>
+<Alfabeto> ::= [A-Z] | [a-z]
+<Palavra> ::= <Alfabeto> | <Palavra> <Alfabeto>
+<Programa> ::= "PROGRAMA " <label> ":" "\n" <Inicio>
+<Inicio> ::= "inicio" "\n" <Conteudo>
+<Variavel> ::= (<Palavra> "=" <Numero>)
+<Conteudo> ::= (<Atribuicao> | <Expressao>) "\n" <Conteudo> | <Fim>
+
+<Atribuicao> ::= <Palavra> "=" <Numero>
+<Expressao> ::= <Palavra> "=" <Termo> (("+" | "-" | "*" | "/") <Termo>)*
+<Termo> ::= (<Palavra> | <Numero>)
+
+<Fim> ::= "fim"
+<label> ::= <Palavra>
